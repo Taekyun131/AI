@@ -1,0 +1,89 @@
+이썬 함수와 내장 함수에 관한 난이도를 좀 더 올린 문제 5개를 준비하였습니다. 이 문제들은 더 복잡한 개념을 요구합니다.
+
+문제 1: 가변 인자 함수
+다음과 같은 average 함수는 가변 인자를 받아서 평균을 계산하는 함수입니다. 이 함수는 *args를 사용하여 몇 개의 인자든 받아야 합니다. 문제: average 함수의 구현을 완료하고, 함수가 여러 개의 숫자를 입력받았을 때 평균을 계산하는 코드를 작성하세요.
+
+python
+코드 복사
+def average(*args):
+    # 여기에 코드를 작성하세요
+답안:
+python
+코드 복사
+def average(*args):
+    return sum(args) / len(args) if args else 0
+
+# 함수 호출
+print(average(10, 20, 30))  # 20.0
+print(average(5, 15, 25, 35, 45))  # 25.0
+print(average())  # 0
+문제 2: 고차 함수와 filter()
+다음 리스트에서 짝수만 걸러내는 filter() 함수를 사용하는 문제입니다. 이 문제는 고차 함수를 사용하여 조건에 맞는 원소만 추출하는 문제입니다.
+
+python
+코드 복사
+numbers = [10, 15, 20, 25, 30, 35, 40]
+문제: numbers 리스트에서 짝수만 추출하여 출력하는 코드를 작성하세요.
+
+답안:
+python
+코드 복사
+numbers = [10, 15, 20, 25, 30, 35, 40]
+even_numbers = filter(lambda x: x % 2 == 0, numbers)
+print(list(even_numbers))  # [10, 20, 30, 40]
+문제 3: zip() 함수와 사전 만들기
+zip() 함수를 사용하여 두 개의 리스트를 결합한 후, 이를 이용해 딕셔너리를 만드는 문제입니다.
+
+python
+코드 복사
+keys = ['name', 'age', 'city']
+values = ['Alice', 25, 'New York']
+문제: keys와 values 리스트를 결합하여 각 원소를 키-값 쌍으로 가지는 딕셔너리를 생성하고 출력하세요.
+
+답안:
+python
+코드 복사
+keys = ['name', 'age', 'city']
+values = ['Alice', 25, 'New York']
+
+result = dict(zip(keys, values))
+print(result)
+# {'name': 'Alice', 'age': 25, 'city': 'New York'}
+문제 4: sorted() 함수의 키 지정
+다음과 같은 리스트가 있을 때, sorted() 함수와 key 매개변수를 사용하여 age를 기준으로 오름차순 정렬하는 문제입니다.
+
+python
+코드 복사
+people = [
+    {"name": "Alice", "age": 25},
+    {"name": "Bob", "age": 30},
+    {"name": "Charlie", "age": 20}
+]
+문제: people 리스트를 나이(age)를 기준으로 오름차순 정렬한 후 출력하세요.
+
+답안:
+python
+코드 복사
+people = [
+    {"name": "Alice", "age": 25},
+    {"name": "Bob", "age": 30},
+    {"name": "Charlie", "age": 20}
+]
+
+sorted_people = sorted(people, key=lambda x: x["age"])
+print(sorted_people)
+# [{'name': 'Charlie', 'age': 20}, {'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
+문제 5: 재귀 함수로 팩토리얼 계산
+재귀 함수를 사용하여 주어진 수의 팩토리얼을 계산하는 문제입니다. 문제: 재귀 함수를 이용해 주어진 숫자 n에 대해 팩토리얼을 계산하는 코드를 작성하세요. 팩토리얼은 n! = n * (n-1) * (n-2) * ... * 1입니다.
+
+답안:
+python
+코드 복사
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+# 함수 호출
+print(factorial(5))  # 120
+print(factorial(7))  # 5040

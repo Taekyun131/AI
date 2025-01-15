@@ -1,0 +1,19 @@
+-기본함수
+
+함수 정의할 때 def 사용
+_를 통해 함수이름 작성
+
+-람다함수
+익명함수로 이름없이 간단하게 사용가능
+lambda 키워드를 사용해 한줄로 작성 가능
+
+//sort()와 sorted()의 차이점
+https://velog.io/@turningtwenty/PYTHON-sort-sorted-%EC%99%84%EB%B2%BD%EC%A0%95%EB%A6%AC
+sort()
+기존의 리스트를 정렬한다.(원본 데이터 수정)
+
+sorted()
+새로운 정렬된 리스트를 만든다(원본 데이터 그대로)
+
+//리스트 컴프리헨션과 제너레이터 설명 및 예제
+https://f-lab.kr/insight/python-list-comprehension-generator?gad_source=1&gclid=Cj0KCQiA9667BhDoARIsANnamQYvWZs4RO4heR5DuYzCJzRL4dfBevoGzsqwsbu94fZ5X-A2pJakRbcaAgfwEALw_wcB

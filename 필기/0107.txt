@@ -1,0 +1,9 @@
+서버(리눅스) 명령어-
+
+sudo docker ps -a
+sudo docker start "container명"
+sudo docker stop "container명"
+
+netstat -ntpl
+
+superset-db나 csv로 dashboard 시각화 Tool
